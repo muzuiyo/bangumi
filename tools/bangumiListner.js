@@ -4,7 +4,9 @@
 // @version      2026-02-08
 // @description  监听 Bangumi 收藏保存，生成 JSON 数据发送到云端同步
 // @author       laintoday
-// @include       /^https://[^/]*/subject/[^/]*$/
+// @match        https://bgm.tv/*
+// @match        https://chii.in/*
+// @match        https://bangumi.tv/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        GM_xmlhttpRequest
 // @grant        GM_setValue
