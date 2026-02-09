@@ -3,7 +3,7 @@
  * 使用 Base64 + XOR 加密，防止明文存储
  */
 
-// 使用一个固定的密钥（在生产环境中可以从环境变量读取）
+// 仅用于前端混淆
 const CRYPTO_KEY = 'bangumi-media-log-2026'
 
 /**
