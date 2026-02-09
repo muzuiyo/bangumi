@@ -137,12 +137,25 @@ pnpm install
 pnpm run dev
 ```
 
+## 3. 使用
 
-## 3. 数据导入与同步
+根据前面设置的 `NEXT_PUBLIC_SETTING_PATH` 参数，前往前端站点 `/NEXT_PUBLIC_SETTING_PATH=sumiko` 路径，进入设置页面，输入在后端服务器设置的 `ADMIN_TOKEN` 进行登录。
 
-### 3.1 从 Bangumi 导入数据
+![截图1](https://github.com/user-attachments/assets/4705f5d2-f1d0-4786-9e3c-c9ec193ce8ea)
 
-本地运行 `tools/exportBangumi.js` 脚本。
+登陆后，激活以下功能，新增、导入、导出、删除、更新条目的功能。
+
+![截图2](https://github.com/user-attachments/assets/18bef675-2737-4904-9a66-214ed197a640)
+
+后端站点可以进入 `/docs` 查看 API 接口文档。
+
+## 4. 数据导入与同步
+
+### 4.1 从 Bangumi 导入数据
+
+此处 Bangumi 为 [Bangumi 番组计划](https://bgm.tv)。
+
+本地运行 `tools/exportBangumi.js` 脚本，该命令会生成用户收藏数据的 json 文件（已适配站点接口）。
 
 ```bash
 node exportBangumi.js <username> [token]
@@ -150,6 +163,8 @@ node exportBangumi.js <username> [token]
 
 `username` 为用户唯一标识符，`token` 应前往 [Bangumi 个人令牌](https://next.bgm.tv/demo/access-token) 获取。
 
-### 3.2 让 Bangumi 数据实时同步到站点
+导入生成的 JSON 文件到站点即可同步 Bangumi 收藏数据。
+
+### 4.2 让 Bangumi 数据实时同步到站点
 
 将 `tools/exportBangumi.js` 脚本添加到站点组件或者油猴脚本，在个性化面板 `收藏记录一栏` 设置参数保存后，用户在 Bangumi 收藏的时候，会同步发送数据到站点。
