@@ -4,7 +4,7 @@
 // @version      2026-02-08
 // @description  监听 Bangumi 收藏保存，生成 JSON 数据发送到云端同步
 // @author       laintoday
-// @match        https://*/*
+// @include       /^https://[^/]*/subject/[^/]*$/
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        GM_xmlhttpRequest
 // @grant        GM_setValue
@@ -460,7 +460,6 @@
       method: "GET",
       headers: {
         accept: "application/json",
-        "User-Agent": "Bangumi-Collection-Listener/1.0",
       },
     };
 
@@ -864,5 +863,6 @@
   } else {
     // DOM 已加载完成，延迟一点确保 chiiLib 加载
     setTimeout(init, 100);
+    console.log("⚡ 同步 Bangumi")
   }
 })();
