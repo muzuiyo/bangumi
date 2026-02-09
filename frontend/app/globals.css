@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #444;
+  --buttonbackground: #ededed;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #2d2d2d;
+    --foreground: #ededed;
+    --buttonbackground: #444;
+  }
+}
+
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .page-container {
+    max-width: 1800px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  header {
+    padding: 30px 80px;
+    font-size: 1.8em;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 80px;
+  }
+
+  .bread-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5 0px;
+    padding: 5 0px;
+    box-sizing: content-box;
+    border-bottom: 1px solid #9b9b9bcf;
+  }
+
+  .setting-button {
+    padding: 2px;
+    border-radius: 2px;
+    color: var(--foreground)
+  }
+
+  .setting-button:hover {
+    cursor: pointer;
+    background-color: var(--buttonbackground);
+  }
+
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 0;
+    align-items: flex-end;
+  }
+
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .filter-group label {
+    font-size: 0.9em;
+    color: var(--foreground);
+  }
+
+  .filter-group select,
+  .filter-group input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: var(--background);
+    color: var(--foreground);
+    font-size: 0.95em;
+    min-width: 140px;
+    height: 38px;
+    box-sizing: border-box;
+  }
+
+  .filter-group select:focus,
+  .filter-group input:focus {
+    outline: none;
+    border-color: #2f6fa3;
+  }
+
+  .filter-group.search-group {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .filter-group.search-group input {
+    width: 100%;
+  }
+
+  .excel-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    overscroll-behavior-x: contain;
+  }
+
+  .excel-container::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .excel-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+
+  .excel-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+  }
+
+  .excel-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  footer {
+    color: #666;
+    font-size: 0.9em;
+    font-style: italic;
+    padding: 30px 80px;
+    margin: 5 0px;
+  }
+}
+
+/* 小屏幕适配 */
+@media only screen and (max-width: 896px) {
+  header {
+	  padding: 30px 20px;
+  }	
+
+  main {
+    padding: 0 20px;
+  }
+  
+  footer {
+	  padding: 30px 20px;
+    margin: 5 0px;
+  }
+}

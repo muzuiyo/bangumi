@@ -1,0 +1,190 @@
+/* Settings 页面样式 */
+
+.settings-main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 设置区域 */
+.settings-section {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  background-color: var(--background);
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 登录状态 */
+.login-status {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: rgba(16, 185, 129, 0.1);
+  border-left: 4px solid #10b981;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10b981;
+}
+
+.status-text {
+  font-size: 14px;
+  color: #10b981;
+}
+
+/* 登录表单 - 密码框和按钮在一行 */
+.login-form {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: flex-start;
+  width: 50%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+
+/* 表单输入 */
+.form-input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+  height: 38px;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #2f6fa3;
+}
+
+.password-input {
+  width: 100%;
+}
+
+/* 错误消息 */
+.error-message {
+  color: #ef4444;
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  min-height: 20px;
+}
+
+/* 按钮 */
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 38px;
+  flex-shrink: 0;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-login {
+  background-color: #3b82f6;
+  color: white;
+  flex-shrink: 0;
+  height: 38px;
+  padding: 0 16px;
+}
+
+.btn-login:not(:disabled):hover {
+  background-color: #2563eb;
+}
+
+.btn-logout {
+  width: 100%;
+  background-color: #ef4444;
+  color: white;
+}
+
+.btn-logout:hover {
+  background-color: #dc2626;
+}
+
+/* 响应式 */
+@media (max-width: 640px) {
+  .settings-main {
+    padding: 16px;
+  }
+
+  .settings-container {
+    gap: 16px;
+  }
+
+  .settings-section {
+    padding: 16px;
+  }
+
+  .login-form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form-group {
+    flex: none;
+    width: 100%;
+  }
+
+  .form-input {
+    padding: 9px 11px;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .btn-login {
+    width: 100%;
+  }
+
+  .btn {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}

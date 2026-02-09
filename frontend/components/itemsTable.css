@@ -1,0 +1,157 @@
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.items-table th {
+  text-align: center;
+  white-space: nowrap;
+  padding: 10px 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.items-table th:nth-child(2),
+.items-table th:nth-child(6) {
+  text-align: left;
+}
+
+.items-table-hint {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  font-size: 16px;
+  color: #6b7280;
+  cursor: help;
+}
+
+.items-table td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.items-table td:first-child,
+.items-table td:nth-child(3),
+.items-table td:nth-child(4),
+.items-table td:nth-child(5),
+.items-table td:nth-child(7) {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.items-table td:nth-child(2) {
+  min-width: 200px;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.items-table-title-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.items-table td:nth-child(6) {
+  min-width: 200px;
+  max-width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.85em;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.badge-neutral {
+  background: #f0f0f0;
+  color: #555;
+}
+
+.badge-type-anime {
+  background: #ffe8ef;
+  color: #b93864;
+}
+
+.badge-type-movie {
+  background: #fff2d9;
+  color: #a85a00;
+}
+
+.badge-type-tv {
+  background: #e9f4ff;
+  color: #2f6fa3;
+}
+
+.badge-type-novel {
+  background: #f3e8d3;
+  color: #5d4a3a;
+}
+
+.badge-type-manga {
+  background: #ffe6f0;
+  color: #a3366d;
+}
+
+.badge-type-game {
+  background: #efe9ff;
+  color: #5b3db0;
+}
+
+.badge-type-music {
+  background: #ffe9e0;
+  color: #a64a2c;
+}
+
+.badge-status-planned {
+  background: #e9f0ff;
+  color: #2e53a6;
+}
+
+.badge-status-doing {
+  background: #e6f7f0;
+  color: #227a5e;
+}
+
+.badge-status-done {
+  background: #f0f7e6;
+  color: #4f7a2a;
+}
+
+.badge-status-hold {
+  background: #f7f0e6;
+  color: #8a5a2a;
+}
+
+.badge-status-drop {
+  background: #f8e6e6;
+  color: #a23b3b;
+}
+
+.comment-link {
+  color: #2f6fa3;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.comment-link:hover {
+  text-decoration: underline;
+}
