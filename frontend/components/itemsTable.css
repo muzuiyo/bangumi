@@ -155,3 +155,31 @@
 .comment-link:hover {
   text-decoration: underline;
 }
+
+/* 骨架动画 */
+@keyframes skeleton-pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+.skeleton-row .skeleton-cell {
+  height: 1.2em;
+  background-color: #e2e8f0;  /* 浅灰色 */
+  border-radius: 4px;
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+/* 为不同列微调占位宽度（已在行内style设置，此规则保留备用） */
+.skeleton-cell {
+  background-color: #e2e8f0;
+}
+
+.skeleton-row td {
+  border-bottom: 1px solid #edf2f7; /* 保持表格线的视觉连续 */
+  padding: 12px 8px;
+}
+
+.skeleton-row td > div {
+  margin: 0; /* 消除内边距影响 */
+}

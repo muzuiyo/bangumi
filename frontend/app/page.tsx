@@ -220,13 +220,7 @@ export default function Home() {
       </div>
 
       <div className="excel-container">
-        {loading ? (
-          <div>加载中...</div>
-        ) : error ? (
-          <div>加载失败：{error}</div>
-        ) : (
-          <ItemsTable items={rows} emptyText="暂无记录" />
-        )}
+        <ItemsTable isLoading={loading} isError={error} skeletonRows={5} items={rows} emptyText="暂无记录" />
       </div>
 
       {isAuthenticated && (
