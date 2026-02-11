@@ -220,7 +220,7 @@ export default function Home() {
       </div>
 
       <div className="excel-container">
-        <ItemsTable isLoading={loading} isError={error} skeletonRows={5} items={rows} emptyText="暂无记录" />
+        <ItemsTable isLoading={loading} isError={error} skeletonRows={20} items={rows} emptyText="暂无记录" />
       </div>
 
       {isAuthenticated && (
