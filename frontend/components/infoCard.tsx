@@ -91,7 +91,6 @@ const InfoCard = ({ item, onClose }: Props) => {
 	}
 
 	const handleUpdate = async () => {
-		// TODO: 实现更新函数
 		// console.log('更新数据:', formData)
 		setIsEditing(false)
         setIsUpdating(true)
@@ -247,7 +246,20 @@ const InfoCard = ({ item, onClose }: Props) => {
 				<div className="info-card-footer">
 					<div className="info-card-label">更新时间</div>
 					<div className="info-card-value">{item.updatedAt}</div>
-					<div className="info-card-id">#{item.id}</div>
+					<div className="info-card-id">
+						{item.external_id ? (
+							<a
+								href={`https://chii.in/subject/${item.external_id}`}
+								target="_blank"
+								rel="noopener noreferrer"
+								style={{ color: '#0070f3', display: 'inline-block' }}
+							>
+								Bangumi #{item.external_id}
+							</a>
+						) : (
+							`#${item.id}`
+						)}
+					</div>
 				</div>
 
 				{isAuthenticated && (
