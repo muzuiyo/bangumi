@@ -128,6 +128,7 @@ export default function Home() {
     () =>
       filteredItems.map((item) => ({
         id: item.id,
+        external_id: item.external_id ?? undefined,
         title: item.title,
         mediaType: mediaTypeLabel[item.media_type],
         status: formatStatus(item),

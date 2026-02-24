@@ -4,6 +4,7 @@ import "./itemsTable.css";
 
 export type ItemsTableRow = {
   id: number;
+  external_id?: string;
   title: string;
   mediaType: string;
   status: string;
