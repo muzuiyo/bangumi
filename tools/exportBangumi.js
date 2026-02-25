@@ -367,7 +367,7 @@ async function exportbangumi(username) {
       
       formattedData.push({
         external_id: item.subject.id,
-        title: item.subject.name,
+        title: item.subject.name + (item.subject.name_cn ? ` / ${item.subject.name_cn}` : "") + (item.subject.date ? ` (${item.subject.date})` : ""),
         mediaType,
         status: convertStatus(item.type),
         rating: item.rate || 0,

@@ -551,7 +551,7 @@
     // 尝试从 API 获取
     const subjectData = await fetchSubjectData(subjectId);
     if (subjectData && subjectData.name) {
-      return subjectData.name;
+      return subjectData.name + (subjectData.name_cn ? ` / ${subjectData.name_cn}` : "") + (subjectData.date ? ` (${subjectData.date})` : "");
     }
 
     // 备用：从页面元素获取
