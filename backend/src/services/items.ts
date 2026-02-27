@@ -1,4 +1,3 @@
-/// <reference types="@cloudflare/workers-types" />
 import type { Env } from '../types/env'
 import type { Item } from '../types/item'
 import type { GetItemsQuery } from '../types/query'
