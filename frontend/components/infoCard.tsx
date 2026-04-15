@@ -77,7 +77,7 @@ const InfoCard = ({ item, onClose }: Props) => {
 					</a>
 				)
 			}
-			return <span key={`${part}-${index}`}>{part}</span>
+			return <div key={`${part}-${index}`}>{part.replaceAll("\n\n", "<br/>")}</div>
 		})
 	}
 
