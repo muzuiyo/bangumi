@@ -77,7 +77,7 @@ const InfoCard = ({ item, onClose }: Props) => {
 					</a>
 				)
 			}
-			return <div key={`${part}-${index}`}>{part.replaceAll("\n\n", "<br/>")}</div>
+			return <div key={`${part}-${index}`} style={{ whiteSpace: "pre-wrap" }}>{part}</div>
 		})
 	}
 
